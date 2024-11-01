@@ -1,0 +1,46 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.titulo-principal {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.my-2 {
+    margin: 20px 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: #0056b3;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(54,56,56);
+    background: linear-gradient(90deg, rgba(54,56,56,1) 0%, rgba(152,154,154,1) 46%, rgba(54,56,56,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+        margin: 0;
+    }

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %}
+
+
+    <div class="p-5 bg-light">
+        <h1 class="titulo-principal">Estas ahora en tu agenda {{ user.username }}</h1>
+        <p class="lead">Agenda telefónica</p>
+        <hr class="my-2">
+        <ul>
+            <li><a href="{% url 'agregar_contacto' %}">Agregar contacto</a></li>
+            <li><a href="{% url 'buscar_contacto' %}">Buscar contacto</a></li>
+            <li><a href="{% url 'listar_contactos' %}">Listar contacto</a></li>
+            <li><a href="{% url 'listar_contactos2' %}">Borrar contacto</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'cerrar_sesion' %}" style="color:rgb(87, 130, 130)">Cerrar sesión</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+
+
+{% load static %}
+
+{% endblock %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
